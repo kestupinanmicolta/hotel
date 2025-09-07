@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Hotel vida buena</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <div id="header">
+            <h1>Habitaciones</h1>
+        </div>
+        <div id="menu">
+            <nav>
+                <ul>
+                    <li><a href="inicio.html">Inicio</a></li>
+                    <li><a href="habitaciones.html">Habitaciones</a></li>
+                    <li><a href="contactenos.html">Contactenos</a></li>
+                </ul>
+            </nav>
+        </div>
+        <form class="contact-form" onsubmit="sendWhatsApp(event)">
+            <h2>Contáctenos</h2>
+        
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" required>
+        
+            <label for="message">Mensaje:</label>
+            <textarea id="message" rows="4" required></textarea>
+        
+            <button type="submit">Enviar a WhatsApp</button>
+          </form>
+        
+          <script>
+            function sendWhatsApp(event) {
+              event.preventDefault();
+              const name = document.getElementById("name").value;
+              const message = document.getElementById("message").value;
+        
+              // 👉 Cambia el número por el tuyo con código de país (ej: +57 para Colombia)
+              const phone = "3194701032";
+              const text = `Hola, soy ${name}. ${message}`;
+              const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+        
+              window.open(url, "_blank");
+            }
+          </script>
+        
+
+
+        <div id="footer">
+            <p>
+                Karen Paola Estupiñan Micolta <br>
+                vidabuena.com forma parte de Booking Holdings Inc., líder mundial en viajes online y servicios
+                relacionados. <br>
+                Copyright © 1996-2025 Booking.com™. Todos los derechos reservados.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

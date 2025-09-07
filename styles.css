@@ -1,0 +1,139 @@
+/* ======================
+   ESTILOS GENERALES
+====================== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  /* 🔹 asegura que el body cubra toda la altura */
+}
+
+.contenedor {
+  flex: 1; /* 🔹 ocupa todo el espacio disponible dejando el footer abajo */
+  max-width: 1000px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ======================
+   HEADER
+====================== */
+#header {
+  background-color: #323e52;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header h1 {
+  color: white;
+  margin: 0;
+}
+
+/* ======================
+   MENÚ DE NAVEGACIÓN
+====================== */
+#menu {
+  background-color: #0a1931;
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#menu ul {
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+#menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+#menu a:hover {
+  color: #facc15;
+}
+
+/* ======================
+   FORMULARIO DE CONTACTO
+====================== */
+.contact-form {
+  width: 100%;          /* Se adapta al ancho del contenedor */
+  max-width: 600px;     /* No rompe el diseño */
+  margin: 30px auto;    /* Centrado */
+  padding: 25px;
+  background: #f4f6f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #323e52;
+}
+.contact-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+}
+.contact-form button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  background: #25D366;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.contact-form button:hover {
+  background: #1ebe5d;
+}
+
+/* ======================
+   FOOTER
+====================== */
+#footer {
+  background-color: #323e52;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto; /* 🔹 empuja el footer hacia abajo */
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  margin: 20px auto;
+  max-width: 1000px;
+}
+
+.galeria img {
+  width: 100%;
+  height: 250px; /* 🔹 Fuerza la altura uniforme */
+  object-fit: cover; /* 🔹 Recorta la imagen sin deformarla */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}

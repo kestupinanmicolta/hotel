@@ -11,8 +11,8 @@
    
 ![alt text](image.png)
 
-5. Dar click en install
-6. 
+4. Dar click en install
+
 ![alt text](image-1.png)
 
-8. Dar click en finish
+5. Dar click en finish
